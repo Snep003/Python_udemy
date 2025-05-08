@@ -1,7 +1,6 @@
-my_motorbike = {
-    'brand': 'Ducati',
-    'price': 12000
-}
-key_name = 'brand'
-my_motorbike[key_name] = 'bmw'
-print(my_motorbike)
+my_dict = {'name': 'Alice', 'age': '30', 'city': 'Paris'}
+print(my_dict['city'])
+my_dict['age'] = 31
+my_dict['job'] = 'Engineer'
+del my_dict['name']
+print(my_dict)
