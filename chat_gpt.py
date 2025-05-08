@@ -68,3 +68,9 @@ number_two = float(number[1])
 print(number_one, type(number_one), number_two, type(number_two))
 print(number_one + number_two, number_one - number_two,
       number_one * number_two, number_one/number_two)
+
+# зробити з строки список чисел, вивести сумму всіх чисел
+my_list = "4.5 3.1 6.8 2.2"
+my_list = list(map(float, my_list.split()))
+
+print(sum(my_list))
