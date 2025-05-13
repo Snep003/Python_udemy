@@ -34,3 +34,7 @@ print(other_set.issubset(my_set))  # Результатом будет False
 # потому что other_set не является подмножеством my_set, в наборе other_set
 # есть 'a' которій не входит в набор my set если убрать 'a' то будет True,
 # ведь в єтом случае other_set будет подмножеством my_set
+
+# вічитание наборов
+print(my_set.difference(other_set))
+print(my_set - other_set)  # результат одинаковій difference и -
