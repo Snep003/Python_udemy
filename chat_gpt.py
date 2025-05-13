@@ -74,3 +74,39 @@ my_list = "4.5 3.1 6.8 2.2"
 my_list = list(map(float, my_list.split()))
 
 print(sum(my_list))
+
+my_list = '12 3 7 9 4'
+my_list = list(map(int, my_list.split()))
+my_list.pop(1)
+my_list.append(15)
+my_list_copy = my_list.copy()
+my_list_copy.pop()
+all_list = my_list + my_list_copy
+all_list.sort(reverse=True)
+print(all_list)
+print(len(all_list), all_list[0], all_list[-1])
+
+
+# СЛОВНИКИ
+info = {'product': 'laptop', 'price': 1200, 'available': True}
+info['price'] = 1000
+info['brand'] = 'Lenovo'
+
+print(info)
+
+
+student = {'name': 'Olena', 'group': 'KV-23', 'marks': [88, 92, 75]}
+student['age'] = 19
+student['marks'].append(85)
+del student['group']
+print(student)
+
+
+student = {'name': 'Ivan', 'age': 20, 'course': 'Math'}
+print(student.get('grade', 0))
+del student['course']
+print(student.keys())
+print(student)
+student_copy = student.copy()
+student_copy['year'] = 2025
+print(student, student_copy)

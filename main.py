@@ -1,7 +1,7 @@
-my_motorbike = {
-    'brand': 'Ducati',
-    'price': 12000
-}
-key_name = 'brand'
-my_motorbike[key_name] = 'bmw'
-print(my_motorbike)
+car = {'brand': 'bmw', 'model': '871', 'year': 2018}
+car['color'] = 'black'
+car_copy = car.copy()
+car_copy.popitem()
+print(car)
+car_copy.clear()
+print(car, car_copy)
