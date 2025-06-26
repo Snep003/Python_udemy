@@ -1,8 +1,28 @@
-def merge_list_to_dict(list1, list2):
-    list_to_dict = list(zip(list1, list2))
-    print(list_to_dict)
+def print_number_info(num):
+    """Prints num information
+
+    Args:
+        num (int): Integer number
+
+    Returns:
+        int: same number
+    """
+    if (num % 2) == 0:
+        print("Entered number is even")
+    else:
+        print("Entered number is odd")
+    return num
 
 
-name = ['Alex', 'Jon', 'Leya']
-age = [10, 15, 20]
-merge_list_to_dict(name, age)
+def squere_num(num):
+    print("Squere num is", num*num)
+
+
+def process_number(num, calback_fn):
+    calback_fn(num)
+
+
+entered_num = int(input("Input any number:"))
+
+process_number(entered_num, print_number_info)
+process_number(entered_num, squere_num)
