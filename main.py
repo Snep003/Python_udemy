@@ -1,28 +1,22 @@
-def print_number_info(num):
-    """Prints num information
+class Image():
+    def __init__(self, resolution='0x0', title='photo', extension='.'):
+        self.resolution = resolution
+        self.title = title
+        self.extension = extension
 
-    Args:
-        num (int): Integer number
+    def resize(self, res):
+        self.resolution = res
 
-    Returns:
-        int: same number
-    """
-    if (num % 2) == 0:
-        print("Entered number is even")
-    else:
-        print("Entered number is odd")
-    return num
+    def title_under(self):
+        self.title = self.title.under()
 
-
-def squere_num(num):
-    print("Squere num is", num*num)
+    def title_upper(self):
+        self.title = self.title.upper()
 
 
-def process_number(num, calback_fn):
-    calback_fn(num)
+my_photo = Image(resolution='1280x900', extension='.png')
+print(my_photo.extension, my_photo.title, my_photo.resolution)
 
-
-entered_num = int(input("Input any number:"))
-
-process_number(entered_num, print_number_info)
-process_number(entered_num, squere_num)
+my_photo.resize('100x100')
+my_photo.title_under()
+print(my_photo.extension, my_photo.title, my_photo.resolution)
